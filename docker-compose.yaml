@@ -1,0 +1,15 @@
+version: '2.3'
+
+services:
+  golang:
+    image: cosmtrek/air
+    # working_dir value has to be the same of mapped volume
+    working_dir: /yao3060/learn-golang
+    ports:
+      - 9090:8081
+    environment:
+      - ENVIRONMENT=dev
+      - GO111MODULE=on
+      - GOPROXY=https://mirrors.aliyun.com/goproxy/
+    volumes:
+      - ./src/:/yao3060/learn-golang/

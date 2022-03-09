@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 set -aeuo pipefail
 
+# create the dotenv file if it doesn't exist
+if [ ! -f .env ]; then
+  cp .env.default .env
+fi
+
 docker-compose up $@

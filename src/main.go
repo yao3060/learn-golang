@@ -6,10 +6,10 @@ func main() {
 	r := gin.Default()
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"Blog":   "www.flysnow.org",
-			"wechat": "flysnow_org",
-			"author": 2,
+			"Blog":   "www.yaoyingying.com",
+			"wechat": "yao306015195",
+			"author": "Yao Yingying",
 		})
 	})
-	r.Run(":8081")
+	r.Run(":8000")
 }

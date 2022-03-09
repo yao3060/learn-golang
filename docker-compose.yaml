@@ -40,6 +40,7 @@ services:
 
   cache:
     image: redis:alpine
+    container_name: ${COMPOSE_PROJECT_NAME}_cache
     restart: always
     command: --loglevel verbose
 
